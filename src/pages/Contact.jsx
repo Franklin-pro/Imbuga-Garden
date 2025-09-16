@@ -30,22 +30,22 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Phone className="h-6 w-6 text-purple-600" />,
+      icon: <Phone className="h-6 w-6 text-green-600" />,
       title: "Phone",
       details: ["+1 (555) 123-4567", "+1 (555) 123-4568"]
     },
     {
-      icon: <Mail className="h-6 w-6 text-purple-600" />,
+      icon: <Mail className="h-6 w-6 text-green-600" />,
       title: "Email",
       details: ["info@imbugaprotocol.com", "events@imbugaprotocol.com"]
     },
     {
-      icon: <MapPin className="h-6 w-6 text-purple-600" />,
+      icon: <MapPin className="h-6 w-6 text-green-600" />,
       title: "Address",
       details: ["123 Event Plaza", "City, State 12345"]
     },
     {
-      icon: <Clock className="h-6 w-6 text-purple-600" />,
+      icon: <Clock className="h-6 w-6 text-green-600" />,
       title: "Business Hours",
       details: ["Mon-Fri: 9:00 AM - 6:00 PM", "Sat: 10:00 AM - 4:00 PM"]
     }
@@ -121,7 +121,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       placeholder="Your full name"
                     />
                   </div>
@@ -135,7 +135,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -151,7 +151,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -164,7 +164,7 @@ const Contact = () => {
                       value={formData.eventType}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     >
                       <option value="">Select event type</option>
                       {eventTypes.map((type) => (
@@ -183,7 +183,7 @@ const Contact = () => {
                     name="eventDate"
                     value={formData.eventDate}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                   />
                 </div>
 
@@ -197,7 +197,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-800 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     placeholder="Tell us about your event, guest count, specific requirements, etc."
                   />
                 </div>
@@ -227,7 +227,7 @@ const Contact = () => {
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 p-3 bg-purple-100 rounded-lg">
+                    <div className="flex-shrink-0 p-3 bg-green-100 rounded-lg">
                       {info.icon}
                     </div>
                     <div>
@@ -288,7 +288,7 @@ const Contact = () => {
             </a>
             <a
               href="mailto:info@imbugaprotocol.com"
-              className="border-2 dark:border-white border-green-400 dark:text-white text-green-500 px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-block"
+              className="border-2 dark:border-white border-green-400 dark:text-white text-green-500 px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-block"
             >
               Email Us
             </a>
