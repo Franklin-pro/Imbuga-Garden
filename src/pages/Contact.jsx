@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageCircle } from 'lucide-react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -279,18 +279,27 @@ const Contact = () => {
           <p className="text-xl mb-8">
             Don't wait - the best dates book up quickly. Contact us today to secure your event date.
           </p>
-          <div className="space-x-4">
+          <div className="space-x-4 space-y-4 sm:space-y-0 flex flex-col sm:flex-row justify-center">
             <a
-              href="tel:+15551234567"
-              className="dark:bg-white dark:text-gray-800 bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors inline-block"
+              href="tel:+250790009332"
+              className="dark:bg-white dark:text-gray-800 bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors inline-flex items-center justify-center"
             >
+              <Phone className="h-5 w-5 mr-2" />
               Call Now
             </a>
             <a
-              href="mailto:info@imbugaprotocol.com"
-              className="border-2 dark:border-white border-green-400 dark:text-white text-green-500 px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-block"
+              href="mailto:kellogademu@gmail.com"
+              className="border-2 dark:border-white border-green-400 dark:text-white text-green-500 px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center justify-center"
             >
+              <Mail className="h-5 w-5 mr-2" />
               Email Us
+            </a>
+            <a
+              href="https://wa.me/250790009332"
+              className=" bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors inline-flex items-center justify-center"
+            >
+              <MessageCircle className="h-5 w-5 mr-2" />
+              WhatsApp Us
             </a>
           </div>
         </div>

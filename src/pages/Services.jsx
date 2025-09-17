@@ -186,10 +186,14 @@ const Services = () => {
             Contact us today for a complimentary consultation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className=" dark:text-gray-100 px-8 py-4 font-semibold bg-green-500 transition-colors rounded-lg">
+            <button
+              onClick={() => navigate('/contact')}
+             className=" dark:text-gray-100 px-8 py-4 font-semibold bg-green-500 transition-colors rounded-lg">
               Get Free Consultation
             </button>
-            <button className="border-2 dark:border-white border-green-500 text-gray-900 dark:text-gray-100 px-8 py-4 font-semibold hover:bg-white hover:text-slate-800 transition-colors rounded-lg flex items-center justify-center">
+            <button 
+              onClick={() => window.location.href = 'tel:+250790009332'}
+            className="border-2 dark:border-white border-green-500 text-gray-900 dark:text-gray-100 px-8 py-4 font-semibold hover:bg-white hover:text-slate-800 transition-colors rounded-lg flex items-center justify-center">
               <Phone className="h-5 w-5 mr-2" />
               Call Now
             </button>

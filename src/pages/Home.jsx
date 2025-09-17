@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Calendar, Users, Award, CheckCircle, ArrowRight, Star, Shield, Clock, ChevronRight, Phone, Mail, MapPin, Play, Sun, Moon, Heart, Sparkles, Quote } from 'lucide-react';
+import { Calendar, Users, Award, CheckCircle, ArrowRight, Star, Shield, Clock, ChevronRight, ChevronLeft, Phone, Mail, MapPin, Play, Sun, Moon, Heart, Sparkles, Quote } from 'lucide-react';
 
 // Importing optimized images (Assuming they are in the public folder or imported)
 // Place these images in your public/images folder or import them if using a bundler
@@ -14,13 +14,27 @@ const client3 = "https://media.themoviedb.org/t/p/w500/xtVgFYaAVzPZplXnWs91QLhnG
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeService, setActiveService] = useState(0);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const sectionRefs = useRef([]);
 
   useEffect(() => {
     setIsVisible(true);
-    const interval = setInterval(() => {
+    
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    const serviceInterval = setInterval(() => {
       setActiveService(prev => (prev + 1) % services.length);
     }, 4000);
+    
+    const testimonialInterval = setInterval(() => {
+      setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
+    }, 5000);
     
     // Intersection Observer for scroll animations
     const observer = new IntersectionObserver((entries) => {
@@ -36,10 +50,22 @@ const Home = () => {
     });
     
     return () => {
-      clearInterval(interval);
+      clearInterval(serviceInterval);
+      clearInterval(testimonialInterval);
+      window.removeEventListener('resize', checkMobile);
       observer.disconnect();
     };
   }, []);
+
+  const nextTestimonial = () => {
+    const maxSlides = (!isMobile && testimonials.length > 2) ? testimonials.length - 1 : testimonials.length - 1;
+    setCurrentTestimonial((prev) => (prev + 1) % (maxSlides + 1));
+  };
+
+  const prevTestimonial = () => {
+    const maxSlides = (!isMobile && testimonials.length > 2) ? testimonials.length - 1 : testimonials.length - 1;
+    setCurrentTestimonial((prev) => (prev - 1 + maxSlides + 1) % (maxSlides + 1));
+  };
 
   const services = [
     {
@@ -173,15 +199,18 @@ const Home = () => {
             <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8 text-slate-300 text-sm md:text-base">
               <div className="flex items-center gap-2 hover:text-green-400 transition-colors duration-300 cursor-pointer">
                 <Phone className="h-4 w-4 text-green-400" />
-                <span>+250 123 456 789</span>
+                <span>+250 790 009 332</span>
               </div>
               <div className="flex items-center gap-2 hover:text-green-400 transition-colors duration-300 cursor-pointer">
                 <Mail className="h-4 w-4 text-green-400" />
-                <span>hello@imbugaprotocol.com</span>
+                <span>kellogademu@gmail.com</span>
               </div>
-              <div className="flex items-center gap-2 hover:text-green-400 transition-colors duration-300 cursor-pointer">
+              <div 
+                className="flex items-center gap-2 hover:text-green-400 transition-colors duration-300 cursor-pointer"
+                onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=Imbuga Service & Protocol Team', '_blank')}
+              >
                 <MapPin className="h-4 w-4 text-green-400" />
-                <span>Kigali, Rwanda</span>
+                <span>Kigali,Kicukiro, Rwanda</span>
               </div>
             </div>
           </div>
@@ -407,37 +436,66 @@ const Home = () => {
             <div className="h-1 w-16 md:w-24 bg-gradient-to-r from-green-400 to-green-500 mx-auto rounded-full"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-50 dark:bg-slate-700 p-6 md:p-8 shadow-lg rounded-2xl hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group">
-                {/* Client image */}
-                <div className="mb-6 -mt-14 flex justify-center">
-                  <div className="relative">
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-lg">
-                      <img 
-                        src={testimonial.image} 
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="absolute -bottom-1 -right-1 bg-green-400 rounded-full p-1">
-                      <Quote className="h-4 w-4 text-white" />
+          <div className="relative max-w-6xl mx-auto">
+            <div className="overflow-hidden rounded-xl">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentTestimonial * (!isMobile && testimonials.length > 2 ? 50 : 100)}%)` }}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className={`${testimonials.length > 2 ? 'w-full md:w-1/2' : 'w-full'} flex-shrink-0`}>
+                    <div className="bg-slate-50 dark:bg-slate-700 p-6 md:p-8 mx-2 rounded-2xl text-center shadow-lg">
+                      <div className="w-16 h-16 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white dark:border-slate-800 shadow-lg">
+                        <img 
+                          src={testimonial.image} 
+                          alt={testimonial.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="flex justify-center mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                        ))}
+                      </div>
+                      <p className="text-slate-600 dark:text-slate-300 mb-4 italic text-base leading-relaxed">
+                        "{testimonial.content}"
+                      </p>
+                      <div>
+                        <div className="font-semibold text-slate-800 dark:text-white">{testimonial.name}</div>
+                        <div className="text-green-600 dark:text-green-400 text-sm">{testimonial.role}</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                
-                <div className="flex mb-4 justify-center">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 md:h-5 md:w-5 text-green-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-slate-600 dark:text-slate-300 mb-6 italic text-sm md:text-base leading-relaxed text-center">"{testimonial.content}"</p>
-                <div className="text-center">
-                  <div className="font-semibold text-slate-800 dark:text-white text-sm md:text-base">{testimonial.name}</div>
-                  <div className="text-green-600 dark:text-green-400 text-xs md:text-sm">{testimonial.role}</div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevTestimonial}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center hover:bg-green-600 transition-colors shadow-lg"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button
+              onClick={nextTestimonial}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center hover:bg-green-600 transition-colors shadow-lg"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    currentTestimonial === index ? 'bg-green-500' : 'bg-gray-300 dark:bg-slate-600'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -470,7 +528,7 @@ const Home = () => {
               GET STARTED TODAY
             </button>
             <button
-              onClick={() => window.location.href = 'tel:+250123456789'}
+              onClick={() => window.location.href = 'tel:+250790009332'}
               className="w-full sm:w-auto border-2 border-green-400 px-6 md:px-8 py-3 md:py-4 font-semibold hover:bg-green-400 text-slate-100 transition-all duration-300 rounded-xl flex items-center justify-center"
             >
               <Phone className="mr-2 h-4 w-4" />

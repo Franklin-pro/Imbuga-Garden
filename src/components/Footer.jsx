@@ -1,4 +1,4 @@
-import { Crown, Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from 'lucide-react'
+import { Crown, Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
@@ -29,7 +29,7 @@ const Footer = () => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
-                <Linkedin className="h-5 w-5" />
+                <Twitter className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -52,17 +52,17 @@ const Footer = () => {
             <div className="space-y-4 text-gray-300">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-white flex-shrink-0" />
-                <span className="text-sm">(+250) 790019543</span>
+                <span className="text-sm">(+250) 790 009 332</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-white flex-shrink-0" />
-                <span className="text-sm">info@imbugaprotocol.com</span>
+                <span className="text-sm">kellogademu@gmail.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-white flex-shrink-0 mt-0.5" />
                 <div className="text-sm">
-                  <div>123 Event Plaza</div>
-                  <div>City, State 12345</div>
+                  <div>Imbuga Garden</div>
+                  <div>Kigali,Kicukiro, KK 500 ST</div>
                 </div>
               </div>
               <div className="flex items-start space-x-3">

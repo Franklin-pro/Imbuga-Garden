@@ -284,10 +284,12 @@ const Gallery = () => {
             Let us help you create memorable moments with our professional protocol services
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-green-500 dark:text-slate-100 px-8 py-4 font-semibold bg-green-500 hover:bg-green-600 cursor-pointer transition-colors rounded-lg">
+            <button
+              onClick={() => window.location.href = '/services'}
+             className="bg-green-500 dark:text-slate-100 px-8 py-4 font-semibold hover:bg-green-600 cursor-pointer transition-colors rounded-lg">
               View Our Services
             </button>
-            <button className="border-2 dark:border-white dark:text-white px-8 py-4 font-semibold hover:bg-white hover:text-slate-800 transition-colors rounded-lg">
+            <button onClick={() => window.location.href = 'tel:+250790009332'} className="border-2 dark:border-white dark:text-white px-8 py-4 font-semibold hover:bg-white hover:text-slate-800 transition-colors rounded-lg">
               Contact Us Today
             </button>
           </div>
