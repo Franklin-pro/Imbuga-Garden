@@ -295,7 +295,7 @@ const Contact = () => {
               Email Us
             </a>
             <a
-              href="https://wa.me/250790009332"
+              href="https://wa.me/250790009332?text=Hi%20Imbuga%20Protocol!%20I'm%20interested%20in%20your%20event%20coordination%20services.%20Could%20you%20please%20provide%20more%20information%20about%20your%20packages%20and%20availability?"
               className=" bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors inline-flex items-center justify-center"
             >
               <MessageCircle className="h-5 w-5 mr-2" />
