@@ -14,11 +14,11 @@ const Footer = () => {
               </div>
               <div>
                 <span className="text-2xl  font-bold">Imbuga</span>
-                <div className="text-xs text-white font-medium tracking-wider">PROTOCOL SERVICES</div>
+                <div className="text-xs text-white font-medium tracking-wider">Protocol & Services</div>
               </div>
             </Link>
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-              Professional protocol services for weddings, corporate events, and special occasions. 
+              Professional Protocol & Services for weddings, corporate events, and special occasions. 
               We ensure every ceremony runs with elegance and precision.
             </p>
             <div className="flex space-x-4">
@@ -79,7 +79,7 @@ const Footer = () => {
         <div className="border-t border-slate-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Imbuga Protocol Services. All rights reserved.
+              &copy; {new Date().getFullYear()} Imbuga Protocol & Services. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>

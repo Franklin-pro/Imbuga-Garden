@@ -1,12 +1,12 @@
-# Imbuga Protocol - Professional Event Protocol Services
+# Imbuga Protocol - Professional Event Protocol & Services
 
-A modern, professional website for marketing protocol services for weddings, anniversaries, corporate events, and special occasions.
+A modern, professional website for marketing Protocol & Services for weddings, anniversaries, corporate events, and special occasions.
 
 ## Features
 
 - **Professional Design**: Clean, modern interface with gradient backgrounds and smooth animations
 - **Responsive Layout**: Fully responsive design that works on all devices
-- **Service Showcase**: Comprehensive display of all protocol services with pricing
+- **Service Showcase**: Comprehensive display of all Protocol & Services with pricing
 - **Contact Forms**: Professional contact forms for quotes and consultations
 - **About Section**: Company story, team, and values presentation
 - **SEO Optimized**: Proper meta tags and semantic HTML structure

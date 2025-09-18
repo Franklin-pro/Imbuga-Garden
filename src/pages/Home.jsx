@@ -81,7 +81,7 @@ const Home = () => {
       image: corporateService,
       icon: <Users className="h-8 w-8 md:h-12 md:w-12 text-green-400" />,
       title: "Corporate Events",
-      description: "Professional protocol services for executive meetings, conferences, and business celebrations",
+      description: "Professional Protocol & Services for executive meetings, conferences, and business celebrations",
       features: ["Executive protocol standards", "International delegation handling", "Brand-aligned execution"],
       color: "from-blue-500/10 to-indigo-500/10",
       accent: "blue"
@@ -161,7 +161,7 @@ const Home = () => {
             <div className="mb-6 md:mb-8 animate-pulse-slow">
               <span className="inline-flex items-center px-4 py-2 rounded-full text-xs md:text-sm font-medium tracking-wide uppercase bg-green-400/20 text-green-300 border border-green-400/30 backdrop-blur-sm hover:bg-green-400/30 transition-all duration-300 cursor-pointer group">
                 <Sparkles className="h-3 w-3 mr-2 group-hover:rotate-180 transition-transform duration-700" />
-                Premium Protocol Services
+                Premium Protocol & Services
                 <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">✨</span>
               </span>
             </div>
@@ -184,7 +184,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center px-4">
               <button
                 onClick={() => window.location.href = '/services'}
-               className="w-full sm:w-auto bg-gradient-to-r from-green-400 to-green-500 text-slate-900 px-6 md:px-8 py-3 md:py-4 font-semibold tracking-wide hover:from-green-500 hover:to-green-600 transition-all duration-300 inline-flex items-center justify-center group rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
+               className="w-full sm:w-auto bg-gradient-to-r from-green-400 to-green-500 text-white px-6 md:px-8 py-3 md:py-4 font-semibold tracking-wide hover:from-green-500 hover:to-green-600 transition-all duration-300 inline-flex items-center justify-center group rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
                 EXPLORE SERVICES 
                 <ArrowRight className="ml-3 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -242,7 +242,7 @@ const Home = () => {
           <div className="text-center mb-12 md:mb-20">
             <span className="text-green-600 dark:text-green-400 text-sm font-semibold tracking-widest uppercase mb-4 block">Our Expertise</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-white mb-6">
-              Protocol Services
+              Protocol & Services
             </h2>
             <div className="h-1 w-16 md:w-24 bg-gradient-to-r from-green-400 to-green-500 mx-auto mb-6 md:mb-8 rounded-full"></div>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto px-4">
@@ -517,7 +517,7 @@ const Home = () => {
             <span className="block text-green-400 animate-pulse-slow">Extraordinary Together</span>
           </h2>
           <p className="text-lg md:text-xl text-slate-300 mb-8 md:mb-12 max-w-3xl mx-auto">
-            Contact us today to start planning your perfect event with professional protocol services
+            Contact us today to start planning your perfect event with professional Protocol & Services
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center max-w-lg mx-auto">

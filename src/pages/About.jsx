@@ -110,7 +110,7 @@ const About = () => {
               <p className="text-lg text-gray-600 dark:text-gray-100 mb-6">
                 Founded in 2009, Imbuga Protocol began with a simple mission: to ensure that every 
                 special occasion is celebrated with the dignity, respect, and precision it deserves. 
-                Our founder, recognizing the need for professional protocol services in the community, 
+                Our founder, recognizing the need for professional Protocol & Services in the community, 
                 started with a passion for cultural ceremonies and traditional events.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-100 mb-6">
@@ -134,7 +134,7 @@ const About = () => {
             >
               <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Our Mission</h3>
               <p className="text-gray-600 dark:text-gray-100 mb-6">
-                To provide exceptional protocol services that honor traditions, respect cultural 
+                To provide exceptional Protocol & Services that honor traditions, respect cultural 
                 diversity, and ensure every event is executed with precision and elegance.
               </p>
               

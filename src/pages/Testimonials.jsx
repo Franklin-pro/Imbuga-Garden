@@ -70,11 +70,11 @@ const Testimonials = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-white">
+            <h1 className="text-5xl md:text-6xl  font-bold mb-6 text-white">
               Share Your Experience
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Help others discover our exceptional protocol services by sharing your testimonial
+              Help others discover our exceptional Protocol & Services by sharing your testimonial
             </p>
           </motion.div>
         </div>
@@ -94,7 +94,7 @@ const Testimonials = () => {
                 <div className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg">
                   <div className="text-center mb-8">
                     <Quote className="h-12 w-12 text-green-500 mx-auto mb-4" />
-                    <h2 className="text-3xl font-serif font-bold text-slate-800 dark:text-gray-100 mb-4">
+                    <h2 className="text-3xl  font-bold text-slate-800 dark:text-gray-100 mb-4">
                       Share Your Story
                     </h2>
                     <p className="text-slate-600 dark:text-gray-100">
@@ -235,7 +235,7 @@ const Testimonials = () => {
                         required
                         rows={6}
                         className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-gray-100 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent"
-                        placeholder="Tell us about your experience with our protocol services. What made your event special? How did our team help make your day perfect?"
+                        placeholder="Tell us about your experience with our Protocol & Services. What made your event special? How did our team help make your day perfect?"
                       />
                     </div>
 
@@ -272,7 +272,7 @@ const Testimonials = () => {
               >
                 <div className="bg-gold/10 dark:bg-gold/20 p-8 rounded-xl">
                   <Heart className="h-12 w-12 text-green-500 mb-4" />
-                  <h3 className="text-2xl font-serif font-bold text-slate-800 dark:text-gray-100 mb-4">
+                  <h3 className="text-2xl  font-bold text-slate-800 dark:text-gray-100 mb-4">
                     Why Your Feedback Matters
                   </h3>
                   <ul className="space-y-3 text-slate-600 dark:text-gray-100">
@@ -326,7 +326,7 @@ const Testimonials = () => {
       {/* CTA Section */}
       <section className="py-20 bg-white dark:bg-slate-700 dark:text-white">
         <div className="container-custom text-center">
-          <h2 className="text-4xl font-serif font-bold mb-6">
+          <h2 className="text-4xl font-bold mb-6">
             Thank You for Choosing Us
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">

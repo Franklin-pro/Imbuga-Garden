@@ -23,7 +23,7 @@ const Services = () => {
       icon: <Building className="h-8 w-8 text-white" />,
       title: "Corporate Events",
       subtitle: "Executive Excellence", 
-      description: "Professional protocol services for business gatherings and corporate celebrations",
+      description: "Professional Protocol & Services for business gatherings and corporate celebrations",
       features: ["Executive meetings", "Conference management", "VIP guest handling"],
       price: "$800"
     },
@@ -47,7 +47,7 @@ const Services = () => {
       icon: <Calendar className="h-8 w-8 text-white" />,
       title: "Special Occasions",
       subtitle: "Memorable Moments",
-      description: "Protocol services for graduations, birthdays, and life's special celebrations",
+      description: "Protocol & Services for graduations, birthdays, and life's special celebrations",
       features: ["Graduation ceremonies", "Birthday celebrations", "Retirement parties"],
       price: "$400"
     },
@@ -80,7 +80,7 @@ const Services = () => {
           >
             <span className="text-white text-sm font-medium tracking-widest uppercase mb-6 block">Our Services</span>
             <h1 className="text-5xl md:text-6xl  font-bold mb-6 text-white">
-              Protocol Services
+              Protocol & Services
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Professional coordination and etiquette guidance for every type of event

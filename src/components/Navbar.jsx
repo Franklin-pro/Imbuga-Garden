@@ -26,7 +26,7 @@ const Navbar = () => {
             </div>
             <div>
               <span className="text-2xl  font-bold text-slate-800 dark:text-white">Imbuga</span>
-              <div className="text-xs text-slate-800 dark:text-white font-medium tracking-wider">PROTOCOL SERVICES</div>
+              <div className="text-xs text-slate-800 dark:text-white font-medium tracking-wider">PROTOCOL & SERVICES</div>
             </div>
           </Link>
 

@@ -58,7 +58,7 @@ const Gallery = () => {
       src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800',
       category: 'wedding',
       title: 'Garden Wedding Reception',
-      description: 'Intimate garden wedding with personalized protocol services'
+      description: 'Intimate garden wedding with personalized Protocol & Services'
     },
     {
       id: 7,
@@ -121,7 +121,7 @@ const Gallery = () => {
               Event Gallery
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Showcasing our professional protocol services across various events and celebrations
+              Showcasing our professional Protocol & Services across various events and celebrations
             </p>
           </motion.div>
         </div>
@@ -281,7 +281,7 @@ const Gallery = () => {
             Ready to Create Your Perfect Event?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Let us help you create memorable moments with our professional protocol services
+            Let us help you create memorable moments with our professional Protocol & Services
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
